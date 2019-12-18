@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="CourseDB.Pages.DefaultUser"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CourseDB"
+      mc:Ignorable="d" 
+      d:DesignHeight="768" d:DesignWidth="1024">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="221"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="285"/>
+            <ColumnDefinition Width="740"/>
+        </Grid.ColumnDefinitions>
+
+        <local:MenuSidebar Grid.Column="0"/>
+        <Canvas Grid.Row="0" Grid.Column="1" Height="50" Margin="35 157 35 18">
+            <TextBox  x:Name="Search" Text ="Пошук за ПІБ" 
+                      HorizontalAlignment="Left" 
+                      VerticalContentAlignment="Center" Padding="25 0 0 0" 
+                      TextAlignment="Left" 
+                      FontSize ="21" Margin="0"
+                      Width="485" Height="50"  
+                      Style="{StaticResource BlackBox}"/>
+            <Button   Content ="ПОШУК" 
+                      HorizontalAlignment="Right" 
+                      VerticalContentAlignment="Center" Padding="25 0 0 0" 
+                      FontSize ="21" Margin="0"
+                      Width="185" Height="50" 
+                      Canvas.Left="485"
+                      Style="{StaticResource BlueButton}"/>
+        </Canvas>
+    </Grid>
+</UserControl>

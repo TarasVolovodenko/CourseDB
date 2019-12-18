@@ -1,0 +1,86 @@
+﻿<Application x:Class="CourseDB.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CourseDB"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <FontFamily x:Key="Circe-Bold">./Fonts/Circe-Bold.ttf#Circe Bold</FontFamily>
+        <FontFamily x:Key="Circe">./Fonts/Circe-Regular.ttf#Circe</FontFamily>
+        
+        
+        
+        <Style x:Key="BlackBox">
+            <Setter Property="Control.FontFamily" Value="{StaticResource Circe}" />
+            <Setter Property="Control.Background" Value="White" />
+            <Setter Property="Control.Foreground" Value="Black" />
+            <Setter Property="Control.Margin" Value="7" />
+            <Setter Property="Control.BorderBrush" Value="Black" />
+            <Setter Property="Control.BorderThickness" Value="2" />
+        </Style>
+        
+        
+        
+        <Style x:Key="BlackText">
+            <Setter Property="Control.FontFamily" Value="{StaticResource Circe-Bold}" />
+            <Setter Property="Control.Background" Value="White" />
+            <Setter Property="Control.Foreground" Value="Black" />
+            <Setter Property="Control.Margin" Value="7" />
+        </Style>
+        
+        <Style x:Key="GrayText">
+            <Setter Property="Control.FontFamily" Value="{StaticResource Circe}" />
+            <Setter Property="Control.Background" Value="White" />
+            <Setter Property="Control.Foreground" Value="#696969" />
+            <Setter Property="Control.Margin" Value="7" />
+        </Style>
+        
+        <Style x:Key="BlueText">
+            <Setter Property="Control.FontFamily" Value="{StaticResource Circe-Bold}" />
+            <Setter Property="Control.Background" Value="White" />
+            <Setter Property="Control.Foreground" Value="#062061" />
+            <Setter Property="Control.Margin" Value="7" />
+        </Style>
+
+        <Style x:Key="MenuInactive" TargetType="Hyperlink">
+            <Setter Property="Control.FontFamily" Value="{StaticResource Circe-Bold}" />
+            <Setter Property="Control.Background" Value="White" />
+            <Setter Property="Control.Foreground" Value="#696969"/>
+            <Setter Property="Control.IsEnabled" Value="False" />
+            <Setter Property="Control.Margin" Value="7" />
+        </Style>
+
+        <Style x:Key="MenuActive" TargetType="Hyperlink">
+            <Setter Property="Control.FontFamily" Value="{StaticResource Circe-Bold}" />
+            <Setter Property="Control.Background" Value="White" />
+            <Setter Property="Control.Foreground" Value="#062061" />
+            <Setter Property="Control.Margin" Value="7" />
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="Control.Foreground" Value="#1E93FF"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style x:Key="MenuCurrent" TargetType="Hyperlink">
+            <Setter Property="Control.FontFamily" Value="{StaticResource Circe-Bold}" />
+            <Setter Property="Control.Background" Value="White" />
+            <Setter Property="Control.Foreground" Value="#1E93FF" />
+            <Setter Property="Control.Margin" Value="7" />
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="Control.Foreground" Value="#1E93FF"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style x:Key="BlueButton">
+            <Setter Property="Control.FontFamily" Value="{StaticResource Circe}" />
+            <Setter Property="Control.FontWeight" Value="Light"/>
+            <Setter Property="Control.Background" Value="#1E93FF" />
+            <Setter Property="Control.Foreground" Value="White" />
+            <Setter Property="Control.Margin" Value="7" />
+            <Setter Property="Control.BorderBrush" Value="Black" />
+            <Setter Property="Control.BorderThickness" Value="0" />
+        </Style>
+    </Application.Resources>
+</Application>
